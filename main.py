@@ -49,8 +49,8 @@ app.add_middleware(
 # =====================================================
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CLASSIFIER_PATH = os.getenv("CLASSIFIER_MODEL_PATH", os.path.join(BASE_DIR, "..", "models", "delay_classifier.pkl"))
-REGRESSOR_PATH = os.getenv("REGRESSOR_MODEL_PATH", os.path.join(BASE_DIR, "..", "models", "delay_regressor.pkl"))
+CLASSIFIER_PATH = os.getenv("CLASSIFIER_MODEL_PATH", os.path.join(BASE_DIR, "models", "delay_classifier.pkl"))
+REGRESSOR_PATH = os.getenv("REGRESSOR_MODEL_PATH", os.path.join(BASE_DIR, "models", "delay_regressor.pkl"))
 
 classifier = joblib.load(CLASSIFIER_PATH)
 regressor = joblib.load(REGRESSOR_PATH)
